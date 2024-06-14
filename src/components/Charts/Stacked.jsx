@@ -41,6 +41,7 @@ const Stacked = ({ width, height }) => {
       </SeriesCollectionDirective>
     </ChartComponent>
   );
+  
 };
 
 export default Stacked;
