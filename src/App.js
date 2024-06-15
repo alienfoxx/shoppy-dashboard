@@ -92,6 +92,7 @@ const App = () => {
         </div>
       </BrowserRouter>
     </div>
+    // Start on color Picker
   );
 };
 
