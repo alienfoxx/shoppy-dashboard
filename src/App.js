@@ -99,5 +99,5 @@ const App = () => {
     // Start on color Picker
   );
 };
-
+// 3.10mins 
 export default App;
