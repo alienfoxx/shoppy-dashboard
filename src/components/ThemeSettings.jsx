@@ -15,7 +15,7 @@ const ThemeSettings = () => {
           <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
-            onClick={() => {}}
+            onClick={() => setThemeSettings(false)}
             style={{ color: "rgba(153,171,180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
           >
@@ -72,7 +72,7 @@ const ThemeSettings = () => {
                   >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        item.color === true ? "block" : "hidden"
+                       false ? "block" : "hidden"
                       }`}
                     />
                   </button>
