@@ -18,13 +18,17 @@ export const ContextProvider = ({ children }) => {
   const setMode = (e) => {
     setCurrentMode(e.target.value);
     localStorage.setItem("themeMode", e.target.value);
+
+    setThemeSettings(false)
   };
-  const setColor = (e) => {
-    setCurrentColor(e.target.value);
-    localStorage.setItem("themeColor", e.target.value);
+  const setColor = (color) => {
+    setCurrentColor(color);
+    localStorage.setItem("themeColor", color);
+    setThemeSettings(false)
   };
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
+
   };
 
   return (
@@ -39,10 +43,10 @@ export const ContextProvider = ({ children }) => {
         setScreenSize,
         currentColor,
         currentMode,
-        setCurrentColor,
-        setCurrentMode,
         themeSettings,
         setThemeSettings,
+        setColor,
+        setMode,
       }}
     >
       {children}
